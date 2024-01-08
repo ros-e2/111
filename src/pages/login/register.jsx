@@ -6,7 +6,7 @@ const User = {
   password: "!tnwls0869",
 };
 
-const Login = (props) => {
+const Register = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -38,9 +38,9 @@ const Login = (props) => {
 
   const onClickConfirmButton = () => {
     if (email === User.email && password === User.password) {
-      alert("Success");
+      alert("Thanks for Register");
     } else {
-      alert("Try Again");
+      alert("Please try again");
     }
   };
 
@@ -97,12 +97,13 @@ const Login = (props) => {
             Continue
           </button>
         </form>
+
         <div>
           <button
             className="link-btn"
-            onClick={() => props.onFormSwitch("register")}
+            onClick={() => props.onFormSwitch("login")}
           >
-            Don't have an account? Register
+            Already have an account? Please log in
           </button>
         </div>
       </div>
@@ -110,4 +111,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Register;
